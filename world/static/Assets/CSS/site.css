@@ -1,0 +1,48 @@
+#map
+{
+    width: 100vw;
+    height: 80vh;
+}
+
+header
+{
+    background-color: #aa96da;
+}
+
+body
+{
+    background-color: #C5FAD5;
+}
+
+h1
+{
+    color: #FFFFD2;
+}
+
+nav
+{
+    background-color: mediumpurple;
+}
+
+h1
+{
+    margin-bottom: 5%;
+}
+
+.nav-link
+{
+    color:#FFFFD2;
+    margin-right: 15px;
+}
+
+.navbar-nav a
+{
+    color: #FFFFD2;
+}
+
+footer
+{
+    background-color: #aa96da;
+    text-align: center;
+
+}

@@ -1,0 +1,19 @@
+<!-- templates/home.html-->
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body_content %}
+
+{% if user.is_authenticated %}
+    <p>Hi {{ user.username }}!</p>
+    <p>Welcome to AWM2022!</p>
+
+{% else %}
+    <p>You are not logged in</p>
+    <p>Please login or sign up</p>
+    <a href="{% url 'login' %}">Log In</a>
+    <br>
+    <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{% endblock %}

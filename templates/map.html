@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load leaflet_tags %}
+{% load static %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% load crispy_forms_filters %}
+{% block head_title %}{% trans "Map Page" %}{% endblock %}
+{% block extra_header %}
+{% endblock %}
+{% block body_content %}
+    {# <h3>{% trans "Map" %}</h3>#}
+    {# <div style="width: 100%">#}
+
+{% if user.is_authenticated %}
+{% leaflet_map "map" callback="window.map_init_basic" %}
+{% else %}
+    <p>You are not logged in</p>
+    <p>Please login or sign up</p>
+    <a href="{% url 'login' %}">Log In</a>
+    <br>
+    <a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+{# </div>#}
+{% endblock %}
+
+{% block extra_footer %}
+    <script src="{% static 'Assets/Scripts/site.js' %}?{% now "U" %}"> </script>
+{% endblock %}
