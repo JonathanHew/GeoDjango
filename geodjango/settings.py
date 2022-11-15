@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'world.apps.WorldConfig',
     'crispy_forms',
     'leaflet',
+    'rest_framework',
+    'accounts',
 ]
 
 MIDDLEWARE = [

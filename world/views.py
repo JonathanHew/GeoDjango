@@ -28,9 +28,3 @@ def update_database(request):
         return JsonResponse({"message": message}, status=200)
     except:
         return JsonResponse({"message": "No profile found."}, status=400)
-
-
-class SignUpView(generic.CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy("login")
-    template_name = "registration/signup.html"
